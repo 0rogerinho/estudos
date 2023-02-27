@@ -1,0 +1,3 @@
+Acessar atividades pelo github
+
+https://github.com/ThiagoDellaNoce/javascript4noobs/blob/master/6_Atividades/Atividades.txt
