@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gerenciamento de Cookies</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="cookie-management" class="cookie-management">
+      <h2>Gerenciamento de Cookies</h2>
+      <p>
+        Este site usa cookies para garantir a melhor experiência possível ao
+        usuário. Selecione os tipos de cookies que deseja permitir abaixo:
+      </p>
+      <form>
+        <label>
+          <input type="checkbox" name="cookie-functional" />
+          Cookies Funcionais
+        </label>
+        <label>
+          <input type="checkbox" name="cookie-analytics" />
+          Cookies de Análise
+        </label>
+        <label>
+          <input type="checkbox" name="cookie-targeting" />
+          Cookies de Publicidade
+        </label>
+        <div class="cookie-management-buttons">
+          <button type="button" onclick="acceptCookies()">Aceitar</button>
+          <button type="button" onclick="rejectCookies()">Rejeitar</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

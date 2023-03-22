@@ -71,7 +71,7 @@
 
       <!-- start screm number -->
       <div class="scren">
-        <p class="numero"></p>
+        <p class="number">0</p>
       </div>
       <!-- end screm number -->
 
@@ -81,25 +81,25 @@
           <button >7</button>
           <button >8</button>
           <button >9</button>
-          <button>Del</button>
+          <button class="del" data-active="return">DEL</button>
           <!--  -->
           <button >4</button>
           <button >5</button>
           <button >6</button>
-          <button >+</button>
+          <button data-previous-key-type="" data-active="add">+</button>
           <!--  -->
           <button >1</button>
           <button >2</button>
           <button >3</button>
-          <button >-</button>
+          <button data-previous-key-type="" data-active="subtract">-</button>
+          <button data-active="decimal">.</button>
+          <button>0</button>
           <!--  -->
-          <button class="operators" >.</button>
-          <button class="operators" >0</button>
-          <button class="operators" >/</button>
-          <button class="operators" >x</button>
+          <button data-previous-key-type="" data-active="divide">/</button>
+          <button data-previous-key-type="" data-active="multiply">x</button>
           <!--  -->
-          <button class="button__end">reset</button>
-          <button class="button__end">=</button>
+          <button class="reset" data-active="clear">RESET</button>
+          <button class="igualdade" data-active="calculator">=</button>
         </section>
       </div>
     <!-- end number -->
@@ -108,7 +108,7 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">0rogerinho</a>.
     </div>
     <script src="script.js"></script>
   </body>

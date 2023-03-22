@@ -1,0 +1,90 @@
+<script>
+  class Product {
+    constructor(name, price, qty) {
+      this.name = name;
+      this.price = price;
+      this.qty = qty;
+    }
+
+    create() {
+      console.log("create");
+    }
+
+    read() {
+      console.log("read");
+    }
+
+    update() {
+      console.log("update");
+    }
+
+    deleteItem() {
+      console.log("delete");
+    }
+  }
+
+  class Collection {
+    constructor() {
+      this.products = [];
+    }
+
+    addProduct(product) {
+      this.products.push(product);
+    }
+
+    removeProduct(product) {
+      this.products = this.products.filter((p) => p !== product);
+    }
+
+    getProduct(index) {
+      return this.products[index];
+    }
+
+    getProducts() {
+      return this.products;
+    }
+
+    search(name) {
+      return this.products.filter((p) => p.nome.indexOf(name) !== -1);
+    }
+  }
+
+  let collection = new Collection();
+  var i = 0;
+  while (i < 30) {
+    let product = new Product("Product " + i, i * 10, i);
+    collection.addProduct(product);
+    i++;
+  }
+
+  let productRender = (() => {
+    function render(product) {
+      let template = document.querySelector(".item");
+      let clone = template.cloneNode(true);
+      clone.querySelector("h1").innerHTML = product.name;
+      clone.querySelector("p").innerHTML = product.price;
+      clone.querySelector("p.quantidade").innerHTML = product.qty;
+      clone.style.display = "block";
+      document.querySelector(".items").appendChild(clone);
+    }
+
+    return {
+      render: render,
+    };
+  })();
+
+  let products = collection.getProducts();
+  document.addEventListener("DOMContentLoaded", () => {
+    products.forEach((product) => {
+      productRender.render(product);
+    });
+  });
+</script>
+
+<div class="items">
+  <div class="item" style="display: none">
+    <h1>{{name}}</h1>
+    <p>{{price}}</p>
+    <p class="quantidade">{{qty}}</p>
+  </div>
+</div>
